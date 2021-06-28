@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 /**
- * 
+ * 测试Git
  * @Description 操作数据库的工具类
  * @author shkstart Email:shkstart@126.com
  * @version
