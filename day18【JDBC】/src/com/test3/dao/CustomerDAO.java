@@ -3,6 +3,7 @@ package com.test3.dao;
 import com.test3.bean.Customer;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -28,16 +29,16 @@ public interface CustomerDAO {
     /**
      * 针对指定的id修改表中的一条记录
      * @param conn
-     * @param id
+     * @param cust
      */
-    void updateById(Connection conn, int id);
+    void update(Connection conn, Customer cust);
 
     /**
      * 根据Id得到指定的Customer对象
      * @param conn
      * @param id
      */
-    void getCustomerById(Connection conn,int id);
+    Customer getCustomerById(Connection conn,int id);
 
     /**
      * 查询表中所有记录构成的集合
@@ -45,4 +46,19 @@ public interface CustomerDAO {
      * @return
      */
     List<Customer> getAll(Connection conn);
+
+    /**
+     * 返回数据表中最大的生日
+     * @param conn
+     * @return
+     */
+    Date getMaxBirth(Connection conn);
+
+    /**
+     * 返回表中数据条数
+     * @param conn
+     * @return
+     */
+    Long getCount(Connection conn);
+
 }

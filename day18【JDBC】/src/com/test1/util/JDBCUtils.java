@@ -1,5 +1,6 @@
 package com.test1.util;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,7 +24,7 @@ public class JDBCUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Connection getConnection() throws Exception {
+	public static Connection getConnection() throws IOException, ClassNotFoundException, SQLException {
 		// 1.读取配置文件中的4个基本信息
 		InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
 
